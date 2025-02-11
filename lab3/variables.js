@@ -28,23 +28,23 @@
 
 
 
-// let имя = 'Talant';
-// let 我 = 'Talant';
+// let имя = 'Adilet';
+// let 我 = 'Adilet';
 
-// const myBirthday = '29.11.2004';
+// const myBirthday = '24.05.2005';
 // myBirthday = '29.11.2000';
 
 
 // let admin, name; // can declare two variables at once
 
-// name = "Talant";
+// name = "Adilet";
 
-// admin = "Talant";
+// admin = "Adilet";
 
 // alert( admin ); // "John"
 
 
 // let ourPlanetName = "Earth";
 
-// let currentUserName = "Talant";
+// let currentUserName = "Adilet";
 
