@@ -1,0 +1,41 @@
+<header class="site-header">
+  <div class="container">
+    <h1>My Online Store</h1>
+  </div>
+</header>
+
+<main class="site-main">
+  <div class="container">
+    <section class="categories-section">
+      <h2>Categories</h2>
+      <div class="category-list">
+        <div 
+          *ngFor="let category of categories" 
+          class="category-item"
+          [class.active]="selectedCategory?.id === category.id"
+          (click)="selectCategory(category)">
+          {{ category.name }}
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" *ngIf="selectedCategory">
+      <h2>{{ selectedCategory.name }}</h2>
+      <app-product-list
+        [products]="filteredProducts"
+        (removeProduct)="onRemoveProduct($event)"
+        (likeProduct)="onLikeProduct($event)">
+      </app-product-list>
+    </section>
+
+    <section *ngIf="!selectedCategory" class="no-selection">
+      <p>Please select a category to view products</p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 My Online Store. All rights reserved.</p>
+  </div>
+</footer>

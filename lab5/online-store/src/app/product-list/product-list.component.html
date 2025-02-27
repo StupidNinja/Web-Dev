@@ -1,0 +1,12 @@
+<div class="products-container">
+  <app-product-item 
+    *ngFor="let product of products" 
+    [product]="product"
+    (remove)="onRemove($event)"
+    (like)="onLike($event)">
+  </app-product-item>
+  
+  <div *ngIf="products.length === 0" class="no-products">
+    No products in this category.
+  </div>
+</div>

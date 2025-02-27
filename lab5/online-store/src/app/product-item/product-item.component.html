@@ -1,0 +1,27 @@
+<div class="product-card">
+  <div class="product-image">
+    <img [src]="product.image" [alt]="product.name">
+  </div>
+  
+  <div class="product-details">
+    <h2>{{ product.name }}</h2>
+    <p class="rating">
+      Rating: {{ product.rating }}/5
+      <span class="stars">
+        <span *ngFor="let star of [1,2,3,4,5]" class="star" [ngClass]="{'filled': star <= product.rating}">★</span>
+      </span>
+    </p>
+    
+    <p class="likes">
+      <span>Likes: {{ product.likes }}</span>
+      <button (click)="onLike()" class="like-button">Like</button>
+    </p>
+    
+    <p class="description">{{ product.description }}</p>
+    
+    <div class="actions">
+      <a [href]="product.storeLink" target="_blank" class="view-button">View on Kaspi</a>
+      <button (click)="onRemove()" class="remove-button">Remove</button>
+    </div>
+  </div>
+</div>

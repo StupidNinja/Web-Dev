@@ -1,0 +1,33 @@
+<div class="products-container">
+  <div class="product-card" *ngFor="let product of products">
+    <div class="product-image">
+      <img [src]="product.image" [alt]="product.name">
+    </div>
+    
+    <div class="product-details">
+      <h2>{{ product.name }}</h2>
+      <div class="rating">
+        Rating: {{ product.rating }}/5
+        <span class="stars">
+          <span *ngFor="let star of [1,2,3,4,5]" class="star" [ngClass]="{'filled': star <= product.rating}">★</span>
+        </span>
+      </div>
+      <div class="description">
+        <p>{{ product.description }}</p>
+      </div>
+      
+      <div class="gallery" *ngIf="product.imageGallery && product.imageGallery.length > 0">
+        <h4>Product Gallery</h4>
+        <div class="gallery-images">
+          <img *ngFor="let img of product.imageGallery" [src]="img" [alt]="product.name" class="gallery-img">
+        </div>
+      </div>
+      
+      <div class="actions">
+        <a [href]="product.storeLink" target="_blank" class="view-button">View on Kaspi</a>
+        <button (click)="shareProduct(product, 'whatsapp')" class="share-button whatsapp">Share on WhatsApp</button>
+        <button (click)="shareProduct(product, 'telegram')" class="share-button telegram">Share on Telegram</button>
+      </div>
+    </div>
+  </div>
+</div>
