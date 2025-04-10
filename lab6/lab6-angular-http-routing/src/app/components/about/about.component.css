@@ -1,0 +1,27 @@
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+button, .btn, .view-full {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.album-item:hover {
+  background-color: var(--light-bg);
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}

@@ -1,0 +1,112 @@
+:root {
+  --primary-color: #2c3e50;      /* Replace with your color */
+  --secondary-color: #e74c3c;    /* Replace with your color */
+  --accent-color: #f39c12;       /* Replace with your color */
+  --text-color: #34495e;         /* Replace with your color */
+  --light-bg: #ecf0f1;           /* Replace with your color */
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Change font */
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 15px 0;
+}
+
+nav ul li a.active {
+  background-color: var(--secondary-color);
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+.album-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.album-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.album-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.album-content {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.album-actions {
+  padding: 10px 15px;
+  border-top: 1px solid #eee;
+  text-align: right;
+}
+button {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+button:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: rgba(255,255,255,0.2);
+  transition: transform 0.4s;
+}
+
+button:hover:after {
+  transform: translateX(100%);
+}
+
+/* Card hover effects */
+.photo-card {
+  transition: all 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px) rotate(1deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.2);
+  font-size: 0.9em;
+}

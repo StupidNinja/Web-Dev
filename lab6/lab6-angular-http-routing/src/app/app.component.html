@@ -1,0 +1,36 @@
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/albums" routerLinkActive="active">Albums</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>About Me</h4>
+      <p>Created by [Your Name] for Web Dev Lab 6</p>
+    </div>
+    <div class="footer-section">
+      <h4>My Skills</h4>
+      <ul>
+        <li>Angular Development</li>
+        <li>UI/UX Design</li>
+        <li>RESTful API Integration</li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 [Your Name]
+  </div>
+</footer>

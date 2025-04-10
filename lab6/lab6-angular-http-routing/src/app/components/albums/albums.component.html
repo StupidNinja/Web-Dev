@@ -1,0 +1,38 @@
+<div class="albums-container">
+  <h1>Albums</h1>
+  
+  <div class="create-album">
+    <h2>Create New Album</h2>
+    <div class="form-group">
+      <input 
+        type="text" 
+        [(ngModel)]="newAlbum.title" 
+        placeholder="Enter album title"
+        [disabled]="loading"
+      >
+      <button (click)="createAlbum()" [disabled]="!newAlbum.title || loading">Create Album</button>
+    </div>
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <div *ngIf="loading" class="loading">
+    Loading albums...
+  </div>
+
+  <div class="album-list">
+    <div *ngFor="let album of albums" class="album-item" (click)="viewAlbum(album)">
+      <div class="album-content">
+        <h3>{{ album.title }}</h3>
+        <p class="album-id">Album ID: {{ album.id }}</p>
+      </div>
+      <button class="delete-btn" (click)="deleteAlbum(album, $event)">Delete</button>
+    </div>
+    
+    <div *ngIf="albums.length === 0 && !loading" class="no-albums">
+      No albums found.
+    </div>
+  </div>
+</div>
