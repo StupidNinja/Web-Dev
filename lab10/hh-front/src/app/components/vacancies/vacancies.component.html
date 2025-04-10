@@ -1,0 +1,33 @@
+<div class="vacancies-container">
+  <a routerLink="/companies" class="back-btn">← Back to Companies</a>
+  
+  <div *ngIf="loading" class="loading">Loading vacancies...</div>
+  
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="company" class="company-header">
+    <h2>{{ company.name }}</h2>
+    <div class="company-location">
+      <strong>Location:</strong> {{ company.city }}, {{ company.address }}
+    </div>
+    <div class="company-description">{{ company.description }}</div>
+  </div>
+
+  <h3 *ngIf="company && !loading" class="vacancies-title">
+    Available Positions
+  </h3>
+
+  <div *ngIf="!loading && !error && vacancies.length === 0" class="no-data">
+    No vacancies available for this company
+  </div>
+
+  <div class="vacancies-list">
+    <div *ngFor="let vacancy of vacancies" class="vacancy-card">
+      <h3 class="vacancy-title">{{ vacancy.name }}</h3>
+      <p class="vacancy-salary">
+        <strong>Salary:</strong> ${{ vacancy.salary.toLocaleString() }}
+      </p>
+      <div class="vacancy-description">{{ vacancy.description }}</div>
+    </div>
+  </div>
+</div>

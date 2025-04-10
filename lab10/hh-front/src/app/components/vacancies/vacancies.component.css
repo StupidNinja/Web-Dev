@@ -1,0 +1,101 @@
+.vacancies-container {
+  padding: 20px 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.loading, .error, .no-data {
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.company-header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.company-header h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.company-location {
+  margin: 10px 0;
+  color: #555;
+}
+
+.company-description {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.vacancies-title {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.vacancies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.vacancy-card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.vacancy-card:hover {
+  transform: translateY(-5px);
+}
+
+.vacancy-title {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.vacancy-salary {
+  color: #28a745;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.vacancy-description {
+  margin-top: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  display: inline-block;
+}

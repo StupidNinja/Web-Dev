@@ -1,0 +1,23 @@
+<div class="companies-container">
+  <h2>Companies</h2>
+
+  <div *ngIf="loading" class="loading">Loading companies...</div>
+  
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="!loading && !error && companies.length === 0" class="no-data">
+    No companies found
+  </div>
+
+  <div class="companies-grid">
+    <div *ngFor="let company of companies" class="company-card">
+      <h3>{{ company.name }}</h3>
+      <p><strong>Location:</strong> {{ company.city }}</p>
+      <p class="company-address">{{ company.address }}</p>
+      <div class="description">{{ company.description }}</div>
+      <button (click)="goToVacancies(company.id)" class="view-vacancies-btn">
+        View Vacancies
+      </button>
+    </div>
+  </div>
+</div>
